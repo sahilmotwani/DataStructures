@@ -16,6 +16,7 @@ public class QueueUsingArray<T> {
 	int arrayLength=50;
 	int front=-1;
 	int rear=-1;
+	
 	@SuppressWarnings("unchecked")
 	public QueueUsingArray(){
 		queueArray = (T[]) new Object[arrayLength];

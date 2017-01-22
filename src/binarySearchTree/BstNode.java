@@ -1,12 +1,13 @@
 package binarySearchTree;
 
 public class BstNode<T> {
-	private int key;
-	private T data;
-	private BstNode<T> left;
-	private BstNode<T> right;
+	int key;
+	T data;
+	BstNode<T> left;
+	BstNode<T> right;
 
 	public BstNode(int key,T data){
+		this.key=key;
 		this.data=data;
 	}
 	

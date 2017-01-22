@@ -20,6 +20,18 @@ public class MyLinkedList<T> {
 		size++;
 	}
 	
+	public void addFirst(T data){
+		Node<T> node = new Node<T>(data);
+		node.setNext(head);
+		head=node;
+	}
+	
+	public T removeFirst(){
+		Node<T> old = head;
+		head=head.getNext();
+		return old.getData();
+	}
+	
 	public Node<T> delete(T data){
 		Node<T> nodeToReturn;
 		if(size==0){
@@ -86,5 +98,43 @@ public class MyLinkedList<T> {
 				return node;
 		}
 		return null;
+	}
+	
+	public void reverse(){
+		if(head==null)
+			return;
+		Node current=head;
+		Node previous = null;
+		Node next;
+		while(current!=null){
+			next=current.getNext();
+			current.setNext(previous);
+			previous=current;
+			current=next;
+		}
+	}
+	
+	public void traverse(){
+		traversal(head);
+	}
+	public void traversal(Node p){
+		if(p==null){ 
+			return;
+		}
+		traversal(p.getNext());
+		System.out.format("%d ",p.getData());
+	}
+	public void reverse(Node p){
+		if(p.getNext()==null){
+			head=p;
+			return;
+		}
+		reverse(p.getNext());
+		Node q=p.getNext();
+		q.setNext(p);
+		p.setNext(null);
+	}
+	public void addFirst(Node n){
+		
 	}
 }

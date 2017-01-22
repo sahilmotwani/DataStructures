@@ -10,7 +10,8 @@ public class LinkedListTest {
 		list.add(2);
 		list.add(15);
 		list.add(10);
-		
+		list.reverse();
+		list.traverse();
 		System.out.println(list.find(2));
 		System.out.println(list.find(15));
 		System.out.println(list.find(10));

@@ -1,10 +1,12 @@
 package stack;
 
+import java.util.Stack;
+
 import org.junit.Test;
 public class StackTest {
 	@Test
 	public void test(){
-		StackUsingArray<Integer> i = new StackUsingArray<Integer>();
+		StackUsingLinkedList<Integer> i = new StackUsingLinkedList<Integer>();
 		i.push(5);
 		i.push(6);
 		i.push(3);
@@ -12,11 +14,12 @@ public class StackTest {
 		i.push(0);
 		i.push(9);
 		i.push(3);
-		System.out.println(i.pop());
-		System.out.println(i.pop());
-		System.out.println(i.pop());
+		i.pop();
+		i.pop();
+		i.pop();
+		i.pop();
 		i.traverse();
-
+		
 	}
 
 	public boolean arePairs(char opening,char closing){
